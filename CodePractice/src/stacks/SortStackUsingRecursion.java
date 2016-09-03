@@ -21,6 +21,4 @@ public class SortStackUsingRecursion {
 			mystack.push(element);
 		}	
 	}
-	
-	
 }

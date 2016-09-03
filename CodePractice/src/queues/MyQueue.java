@@ -5,14 +5,14 @@ public class MyQueue {
 	int front = -1;
 	int rear = -1;
 	int size;
-	int []mystack;
+	Object []mystack;
 	
 	public MyQueue(int m){
 		this.size = m;
-		mystack = new int[m];
+		mystack = new Object[m];
 	}
 	
-	public void enqueue(int element){
+	public void enqueue(Object element){
 		if(isFull()){
 			throw new IllegalStateException("Queue is full");
 		}else if(front == -1 && rear == -1){
@@ -28,8 +28,8 @@ public class MyQueue {
 		}
 	}
 	
-	public int dequeue(){
-		int value;
+	public Object dequeue(){
+		Object value;
 		if(isEmpty()){
 			throw new IllegalStateException("Queue is empty");
 		}else if(front == rear){
